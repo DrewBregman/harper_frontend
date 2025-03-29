@@ -33,10 +33,10 @@ export async function generateForm(companyId) {
   };
 }
 
-export async function updateForm(companyId, command) {
+export async function updateForm(formData, updateCommand) {
   const response = await axios.post(`${API_BASE_URL}/forms/update`, {
-    company_id: companyId,
-    command
+    formData,
+    updateCommand
   });
   return response.data; // => { updatedFormData: {...} }
 }

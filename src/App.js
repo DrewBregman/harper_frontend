@@ -85,7 +85,15 @@ function App() {
               <div className="voice-editor-panel fade-in">
                 <div className="panel-split">
                   <div className="panel-left">
-                    <VoiceInterface />
+                    <VoiceInterface 
+                      selectedCompanyId={selectedCompanyId}
+                      onFormUpdate={(updatedFormData) => {
+                        // When voice command updates the form, refresh the PDF
+                        if (updatedFormData) {
+                          handlePdfGenerated(pdfUrl);
+                        }
+                      }}
+                    />
                   </div>
                   <div className="panel-right">
                     <FormEditor 

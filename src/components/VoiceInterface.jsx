@@ -86,9 +86,13 @@ const VoiceInterface = ({ selectedCompanyId, onFormUpdate }) => {
     setStatus("Processing command...");
 
     try {
-      // Call the updateForm route (which includes your server-side state logic)
-      // We pass the company ID and the transcript as the "command"
-      const data = await updateForm(selectedCompanyId, transcript);
+      // We need a form data object to update
+      // Get the current form data from parent or use a placeholder
+      const currentFormData = onFormUpdate ? { company_id: selectedCompanyId } : { company_id: selectedCompanyId };
+      
+      // Call the updateForm route with the correct parameters
+      const data = await updateForm(currentFormData, transcript);
+      
       // data.updatedFormData => new fields from the backend
       onFormUpdate && onFormUpdate(data.updatedFormData);
       setStatus(`Command executed: "${transcript}"`);
