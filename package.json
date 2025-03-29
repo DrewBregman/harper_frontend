@@ -1,0 +1,36 @@
+{
+  "name": "harper-ai-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@clerk/clerk-react": "^4.32.5",
+    "@react-pdf-viewer/core": "^3.12.0",
+    "@react-pdf-viewer/default-layout": "^3.12.0",
+    "axios": "^1.3.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-pdf": "^9.2.1",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.0"
+  }
+}
