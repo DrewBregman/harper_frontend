@@ -25,7 +25,10 @@ function App() {
     <div className="app-container">
       <div className="container">
         <header className="header">
-          <h1>Harper AI - Insurance Form Generator</h1>
+          <div className="app-title">
+            <div className="app-logo">H</div>
+            <span className="app-name">Harper Insurance</span>
+          </div>
           <SignedIn>
             <div className="user-section">
               <UserButton />
@@ -35,11 +38,17 @@ function App() {
         
         <SignedOut>
           <div className="auth-section fade-in">
-            <h2>Welcome to Harper AI</h2>
-            <p style={{ marginBottom: '2rem', color: 'var(--text-secondary)' }}>
-              Please sign in to access the insurance form generator.
-            </p>
-            <SignIn />
+            <div className="auth-header">
+              <div className="app-title" style={{ justifyContent: 'center', marginBottom: '0.75rem' }}>
+                <div className="app-logo">H</div>
+                <span className="app-name">Harper Insurance</span>
+              </div>
+              <h2 className="auth-title">Welcome</h2>
+              <p className="auth-subtitle">Sign in to access the insurance form generator</p>
+            </div>
+            <div className="auth-container">
+              <SignIn />
+            </div>
           </div>
         </SignedOut>
         

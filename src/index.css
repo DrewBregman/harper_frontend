@@ -274,19 +274,86 @@ button:active:not(:disabled) {
   border-bottom: 1px solid var(--border-color);
 }
 
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.app-logo {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--primary-color);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.app-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
+}
+
 .user-section {
   display: flex;
   align-items: center;
 }
 
 .auth-section {
-  max-width: 360px;
+  max-width: 440px;
   margin: 2rem auto;
   padding: 1.75rem;
   background-color: var(--card-background);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-color);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.auth-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.auth-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.auth-container {
+  margin-top: 1.25rem;
+}
+
+/* Override Clerk styles */
+.cl-component,
+.cl-auth-form-container,
+.cl-card {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.cl-auth-form-container {
+  gap: 0 !important;
+}
+
+.cl-card {
+  border: none !important;
 }
 
 /* Workflow Steps */
@@ -406,7 +473,7 @@ button:active:not(:disabled) {
 
 .company-dropdown {
   font-size: 0.875rem;
-  padding: 0.625rem 0.875rem;
+  padding: 0.625rem 0.75rem;
   border-radius: var(--radius-md);
   cursor: pointer;
 }
@@ -841,5 +908,10 @@ button:active:not(:disabled) {
   .back-button,
   .next-button {
     width: 100%;
+  }
+
+  .auth-section {
+    margin: 1rem;
+    padding: 1.25rem;
   }
 }
